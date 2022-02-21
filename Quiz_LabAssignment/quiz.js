@@ -59,6 +59,9 @@ Quiz.prototype.isEnded = function() {
 function showScore() {
     document.querySelector('#quiz').innerHTML = `<h1>Result</h1>
         <div id="score">You scored ${quiz.score} / ${quiz.questions.length}</div>`;
+        var x ="<h2>Your percentage is : "+(quiz.score/questions.length)*100+"%</h2>";
+        document.getElementById("quiz").innerHTML= `<h1>Result</h1>
+        <div id="score">You scored ${quiz.score} / ${quiz.questions.length}</div>` + x;
 }
 
 function loadQuestion() {
